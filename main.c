@@ -2,25 +2,18 @@
 
 int main(){
 
-    int n1, n2, n3, maior;   
+    int n1, n2, n3, n4, maior;   
 
-    printf("Digite 3 valores: ");
-    scanf("%d %d %d", &n1, &n2, &n3);
+    printf("Digite 4 valores: ");
+    scanf("%d %d %d %d", &n1, &n2, &n3, &n4);
 
     maior = n1;    
 
-    if(n1 >= n2 && n1 >= n3){
-        maior = n1;
-        printf("O maior é %d.\n", n1);
-    }else if(n2 >= n3 && n2 >= n1){
-        maior = n2;
-        printf("O maior é %d.\n", n2);
-    }else if(n3 >= n1 && n3 >= n2){
-        maior = n3;
-        printf("O maior é %d.\n", n3);
-    }else{
-        printf("Valor inválido.\n");
-    }
+    maior = (n2 > maior) ? n2 : maior;
+    maior = (n3 > maior) ? n3 : maior;
+    maior = (n4 > maior) ? n4 : maior;
+    
+    printf("O maior é %d.\n", maior);
 
     return 0;
 
